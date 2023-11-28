@@ -7,7 +7,7 @@ import { type TemplateProps } from "keycloakify/login/TemplateProps";
 import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "./kcContext";
 import type { I18n } from "./i18n";
-
+import CustomLogin from "./customLogin";
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
         displayInfo = false,
@@ -48,8 +48,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
 
     return (
-        <div className={getClassName("kcLoginClass")}>
-            <div id="kc-header" className={getClassName("kcHeaderClass")}>
+        <div >
+            {/* <div id="kc-header" className={getClassName("kcHeaderClass")}>
                 <div 
                     id="kc-header-wrapper" 
                     className={getClassName("kcHeaderWrapperClass")}
@@ -57,9 +57,11 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 >
                     {msg("loginTitleHtml", realm.displayNameHtml)}!!!
                 </div>
-            </div>
+            </div> */}
 
-            <div className={clsx(getClassName("kcFormCardClass"), displayWide && getClassName("kcFormCardAccountClass"))}>
+        <CustomLogin>    
+          
+      <div className={clsx(getClassName("kcFormCardClass"), displayWide && getClassName("kcFormCardAccountClass"))+" w-full"}>
                 <header className={getClassName("kcFormHeaderClass")}>
                     {realm.internationalizationEnabled && (assert(locale !== undefined), true) && locale.supported.length > 1 && (
                         <div id="kc-locale">
@@ -97,7 +99,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 </div>
                             </div>
                         ) : (
-                            <h1 id="kc-page-title">{headerNode}</h1>
+                            <h1 id="kc-page-title" className="p-2 text-xl font-semibold text-miracle-black">{headerNode}</h1>
                         )
                     ) : displayRequiredFields ? (
                         <div className={getClassName("kcContentWrapperClass")}>
@@ -195,6 +197,16 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     </div>
                 </div>
             </div>
+      
+            </CustomLogin> 
+     
+
+        
+    
+      
+
+    
+           
         </div>
     );
 }
