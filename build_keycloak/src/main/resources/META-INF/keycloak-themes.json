@@ -1,0 +1,18 @@
+{
+  "themes": [
+    {
+      "name": "keycloakify-starter",
+      "types": [
+        "login",
+        "account"
+      ]
+    },
+    {
+      "name": "keycloakify-starter-variant-1",
+      "types": [
+        "login",
+        "account"
+      ]
+    }
+  ]
+}
