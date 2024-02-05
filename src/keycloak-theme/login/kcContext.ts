@@ -23,6 +23,7 @@ export const { getKcContext } = createGetKcContext<KcContextExtension>({
 				//When we test the login page we do it in french
 				currentLanguageTag: "en",
 			},
+			
 			//Uncomment the following line for hiding the Alert message
 			//"message": undefined
 			//Uncomment the following line for showing an Error message

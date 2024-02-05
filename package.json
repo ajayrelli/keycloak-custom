@@ -11,7 +11,7 @@
         "postinstall": "copy-keycloak-resources-to-public",
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "build-keycloak-theme": "yarn build && keycloakify",
+        "build-keycloak-theme": "npm run build && keycloakify",
         "storybook": "start-storybook -p 6006"
     },
     "keycloakify": {
@@ -29,6 +29,7 @@
         "evt": "^2.4.15",
         "keycloakify": "^8.4.0",
         "oidc-spa": "^2.0.2",
+        "patternfly": "^3.59.5",
         "powerhooks": "^0.26.8",
         "react": "18.1.0",
         "react-dom": "18.1.0",
